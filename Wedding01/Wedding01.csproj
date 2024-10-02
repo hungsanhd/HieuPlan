@@ -7,7 +7,7 @@
 	<RazorCompileOnPublish>false</RazorCompileOnPublish>
     <MvcRazorCompileOnPublish>false</MvcRazorCompileOnPublish>
     <UserSecretsId>3e582fc7-68e9-4c34-9475-01adb2beeb5d</UserSecretsId>
-    <DockerDefaultTargetOS>Windows</DockerDefaultTargetOS>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
   </PropertyGroup>
 
   <ItemGroup>
