@@ -1,0 +1,502 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+    // Layout = null;
+}
+<style>
+    .iconGift {
+        position: fixed; /* Để biểu tượng luôn ở vị trí cố định */
+        bottom: 20px; /* Đặt cách đáy 20px */
+        right: 20px; /* Đặt cách bên phải 20px */
+        font-size: 30px; /* Kích thước biểu tượng */
+        transition: transform 0.2s; /* Hiệu ứng mượt mà khi di chuyển */
+        z-index: 1000
+    }
+
+    .content {
+        margin-top: 100px; /* Để không bị che bởi biểu tượng */
+    }
+
+    .iconGift:hover {
+        cursor: pointer;
+    }
+</style>
+
+<section id="home" class="video-hero js-fullheight" style="height: 700px; background-image: url(images/Gallery/_LYL9589_1.jpg); background-size:cover; background-position: top center;" data-stellar-background-ratio="0.5">
+    <div class="overlay"></div>
+    <a class="player" data-property="{videoURL:'https://www.youtube.com/watch?v=bOHdYviHNsc&ab_channel=Kh%C3%A1nhNguy%E1%BB%85n',containment:'#home', showControls:false, autoPlay:true, loop:true, mute:true, startAt:0, opacity:1, quality:'default',optimizeDisplay:true}"></a>
+    <div class="container">
+        <div class="row js-fullheight justify-content-center d-flex align-items-center">
+            <div class="col-md-12">
+                <div class="text text-center" style="margin-top:130px">
+                    <div class="icon">
+                        <span class="flaticon-rose-outline-variant-with-vines-and-leaves"></span>
+                    </div>
+                    <span class="subheading">hôn lễ của chúng tôi</span>
+                    <h1 style="font-size:5vw">Nguyễn Khánh</h1>
+                    <h1 style="line-height:1; font-size:5vw">&amp;</h1>
+                    <h1 style="font-size:5vw">Thu Hường</h1>
+                    <div id="timer" class="d-flex">
+                        <div class="time" id="days"></div>
+                        <div class="time pl-3" id="hours"></div>
+                        <div class="time pl-3" id="minutes"></div>
+                        <div class="time pl-3" id="seconds"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="audio-player" style="display:none">
+        <button id="play-btn">▶</button>
+        <button id="pause-btn" style="display:none;">❚❚</button>
+    </div>
+</section>
+<section class="ftco-section ftco-about ftco-no-pt ftco-no-pb" id="groom-bride-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="wrap">
+                    <div class="row d-flex">
+                        <div class="col-md-6 d-flex">
+                            <div class="img d-flex align-self-stretch align-items-center" style="background-image:url(images/Gallery/_LYL8279_1.jpg);">
+                            </div>
+                        </div>
+                        <div class="col-md-6 py-md-5 text">
+                            <div class="py-md-4">
+                                <div class="row justify-content-start pb-3">
+                                    <div class="col-md-12 ftco-animate p-4 p-lg-5 text-center">
+                                        <span class="subheading mb-4" style="font-size:16px">Sự có mặt của các bạn <br>là lời chúc phúc tốt đẹp nhất với chúng tôi</span>
+                                        <h2 class="mb-4" style="font-size:54px">Khánh <span>&amp;</span> Hường</h2>
+                                        <span class="icon flaticon-rose-variant-outline-with-vines"></span>
+                                        <span class="subheading">Hôn lễ được tổ chức vào ngày</span>
+                                        <p class="time mb-4"><span>13/10/2024</span></p>
+                                        <span class="subheading mb-5">Bắt đầu vào lúc 11:00</span>
+                                        <span class="subheading mb-5" style="font-size:13px; text-transform:unset !important">
+                                            Nhà trai:
+                                            <br />Ông: <b>NGUYỄN QUỐC TIẾN</b>
+                                            <br />bà: <b>ĐÀO THỊ LAN ANH</b>
+                                            <br>Thôn Lôi Xá - Đức Chính - Cẩm Giàng - Hải Dương
+                                        </span>
+                                        <span class="subheading mb-5" style="font-size:13px; text-transform:unset !important">
+                                            Nhà gái:
+                                            <br />bà: <b>VŨ THỊ NGA</b>
+                                            <br>Thôn Bằng Quân - Định Sơn - Cẩm Giàng - Hải Dương
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="ftco-section bg-section">
+    <div class="overlay-top" style="background-image: url(images/top-bg.jpg);"></div>
+    <div class="overlay-bottom" style="background-image: url(images/bottom-bg.jpg);"></div>
+    <div class="container">
+        <div class="row justify-content-center pb-5">
+            <div class="col-md-12 text-center heading-section ftco-animate">
+                <span class="clone">Cô dâu &amp; Chú rể</span>
+                <h2 class="mb-3">Cô dâu &amp; Chú rể</h2>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-md-10">
+                <div class="row">
+                    <div class="col-md-6 text-center d-flex align-items-stretch">
+                        <div class="bride-groom ftco-animate">
+                            <div class="img" style="background-image: url(images/Gallery/_LYL9261_1.jpg);"></div>
+                            <div class="text mt-4 px-4">
+                                <h2>Nguyễn Khánh</h2>
+                                <p>Là lập trình viên hiện đang công tác tại một công ty công nghệ ở Ba Đình, Hà Nội. Anh là người hiền lành và ít nói</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 text-center d-flex align-items-stretch">
+                        <div class="bride-groom ftco-animate">
+                            <div class="img" style="background-image: url(images/Gallery/_LYL9061_1.jpg);"></div>
+                            <div class="text mt-4 px-4">
+                                <h2>Nguyễn Thu Hường</h2>
+                                <p>Một cô gái thuộc chòm sao thiên bình yêu màu xanh và thích những điều đơn giản</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="ftco-section" id="lovestory-section">
+    <div class="container">
+        <div class="row justify-content-center pb-5">
+            <div class="col-md-12 text-center heading-section ftco-animate">
+                <span class="clone">Love Story</span>
+                <h2 class="mb-3">Dấu mốc tình yêu</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <ul class="timeline animate-box">
+                    <li class="animate-box">
+                        <div class="timeline-badge" style="background-image:url(images/Gallery/_LYL9589_1.jpg);"></div>
+                        <div class="timeline-panel ftco-animate text-md-right">
+                            <div class="overlay"></div>
+                            <div class="timeline-heading">
+                                <h3 class="timeline-title">Lần đầu làm quen</h3>
+                            </div>
+                            <div class="timeline-body">
+                                <p style="text-align:justify">
+                                    Chúng tôi lần đầu tiên nói chuyện khi còn học chung trường cấp 3. Đó là khởi đầu cho câu chuyện của chúng tôi – những cảm xúc ban đầu đầy ngại ngùng nhưng lại rất đáng nhớ.
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="timeline-inverted animate-box">
+                        <div class="timeline-badge" style="background-image:url(images/IMG_2575.JPG);"></div>
+                        <div class="timeline-panel ftco-animate">
+                            <div class="overlay overlay-2"></div>
+                            <div class="timeline-heading">
+                                <h3 class="timeline-title">Thanh xuân có nhau</h3>
+                            </div>
+                            <div class="timeline-body">
+                                <p style="text-align:justify">
+                                    Suốt những năm cấp 3 và đại học, chúng tôi luôn bên nhau, dù có những lần giận dỗi, chia tay rồi quay lại. Chúng tôi đã cùng nhau trải qua những tháng ngày tươi đẹp của tuổi trẻ, đi qua những con đường Tình Yêu rợp bóng cây của trường Sư Phạm, ngồi trên ghế đá khoa Pháp nói đủ thứ chuyện linh tinh.
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="animate-box">
+                        <div class="timeline-badge" style="background-image:url(images/IMG_2054.JPG);"></div>
+                        <div class="timeline-panel ftco-animate text-md-right">
+                            <div class="overlay"></div>
+                            <div class="timeline-heading">
+                                <h3 class="timeline-title">Tạm chia xa</h3>
+                            </div>
+                            <div class="timeline-body">
+                                <p style="text-align:justify">
+                                    Vì nhiều lý do không tên, chúng tôi đã tạm xa nhau một thời gian, không ngắn cũng không dài. Đây có lẽ là khoảng thời gian để mỗi người tự khám phá và hoàn thiện bản thân.
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="timeline-inverted animate-box">
+                        <div class="timeline-badge" style="background-image:url(images/CoTo1.jpg);"></div>
+                        <div class="timeline-panel ftco-animate text-md-right">
+                            <div class="overlay"></div>
+                            <div class="timeline-heading">
+                                <h3 class="timeline-title">Ngày gặp lại</h3>
+                            </div>
+                            <div class="timeline-body">
+                                <p style="text-align:justify">
+                                    Tình cờ, một ngày chúng tôi lại gặp nhau và nói chuyện trong chuyến đi Cô Tô – không hẹn mà gặp. Mọi thứ diễn ra thật tự nhiên, cảm giác quen thuộc trở lại, và chúng tôi nối lại câu chuyện tình yêu của mình một cách rất tự nhiên.
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="animate-box">
+                        <div class="timeline-badge" style="background-image:url(images/Gallery/_LYL8544_1.jpg);"></div>
+                        <div class="timeline-panel ftco-animate">
+                            <div class="overlay overlay-2"></div>
+                            <div class="timeline-heading">
+                                <h3 class="timeline-title">Quyết định trọng đại</h3>
+                            </div>
+                            <div class="timeline-body">
+                                <p style="text-align:justify">
+                                    Năm 2023 là một năm với nhiều biến động và thay đổi, nhưng chúng tôi đã luôn bên nhau, tìm được sự an ủi và động viên từ đối phương. Dù có những lúc giận hờn, cãi vã, chúng tôi đã vượt qua một cách trưởng thành hơn so với những năm tháng thời sinh viên, để rồi đưa đến quyết định về chung một nhà.
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="animate-box" style="top:90px; display:flex; justify-content:center">
+                        <div class="timeline-panel ftco-animate text-md-right">
+                            <div class="overlay"></div>
+                            <div class="timeline-heading" style="text-align:center">
+                                <h3 class="timeline-title">Save the date</h3>
+                                <span class="date" style="font-size:20px">13/10/2024</span>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="ftco-section bg-light" id="greeting-section">
+    <div class="container">
+        <div class="row justify-content-center pb-5">
+            <div class="col-md-12 text-center heading-section ftco-animate">
+                <span class="clone">Lời chúc ngọt ngào</span>
+                <h2 class="mb-3">Lời chúc từ bạn bè</h2>
+            </div>
+        </div>
+        <div class="row ftco-animate">
+            <div class="col-md-12">
+                <div class="carousel-testimony owl-carousel ftco-owl">
+                    <div class="item">
+                        <div class="testimony-wrap py-4">
+                            <div class="text">
+                                <p class="mb-4">Chúc mừng hạnh phúc, cây tình yêu sau hơn mười năm trời, trải qua bao nắng hạn hay mưa sa, cuối cùng cũng đã kết trái ngọt!</p>
+                                <div class="d-flex align-items-center">
+                                    <div class="user-img" style="background-image: url(images/logo01.png)"></div>
+                                    <div class="pl-3">
+                                        <p class="name">Cao Trung Hiếu</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="testimony-wrap py-4">
+                            <div class="text">
+                                <p class="mb-4">Dẫu trải qua trăm ngàn sóng gió, cuối cùng chúng ta đã về bên nhau. Chúc hai bạn trăm năm hạnh phúc, sớm sinh quý tử.</p>
+                                <div class="d-flex align-items-center">
+                                    <div class="user-img" style="background-image: url(images/Hiep.jpg)"></div>
+                                    <div class="pl-3">
+                                        <p class="name">Cao Văn Hiệp</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="testimony-wrap py-4">
+                            <div class="text">
+                                <p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                                <div class="d-flex align-items-center">
+                                    <div class="user-img" style="background-image: url(images/quang.jpg)"></div>
+                                    <div class="pl-3">
+                                        <p class="name">Trương Quang</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="testimony-wrap py-4">
+                            <div class="text">
+                                <p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                                <div class="d-flex align-items-center">
+                                    <div class="user-img" style="background-image: url(images/Phuong.jpg)"></div>
+                                    <div class="pl-3">
+                                        <p class="name">Lê Văn Phương</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="testimony-wrap py-4">
+                            <div class="text">
+                                <p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                                <div class="d-flex align-items-center">
+                                    <div class="user-img" style="background-image: url(images/Khanh1.jpg)"></div>
+                                    <div class="pl-3">
+                                        <p class="name">Mai Công Khánh</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="testimony-wrap py-4">
+                            <div class="text">
+                                <p class="mb-4">Chúc mừng hạnh phúc 2 bạn nhé. Chúc 2 bạn con đàn cháu đống sống vs nhau đến lúc đầu bạc răng long :)))</p>
+                                <div class="d-flex align-items-center">
+                                    <div class="user-img" style="background-image: url(images/NguyenQuocDung.png)"></div>
+                                    <div class="pl-3">
+                                        <p class="name">Nguyễn Quốc Dũng</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="ftco-section bg-light" id="when-where-section">
+    <div class="container">
+        <div class="row justify-content-center pb-5">
+            <div class="col-md-12 text-center heading-section ftco-animate">
+                <span class="clone">Lịch trình</span>
+                <h2 class="mb-3">Lịch trình</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4 ftco-animate">
+                <div class="place img" style="background-image: url(images/place-1.jpg);">
+                    <div class="text text-center">
+                        <span><img src="~/images/groom-suit.png" style="width:20%" /></span>
+                        <h3 style="font-size:1.5rem">Tiệc đãi khách nhà trai</h3>
+                        <p><span style="font-size:20px">THỨ BẢY</span></p>
+                        <p><span>Ngày 12 tháng 10 năm 2024</span><br><span>lúc 16h00</span></p>
+                        <p><span>Nhà trai: Thôn Lôi Xá - Đức Chính - Cẩm Giàng - Hải Dương</span></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 ftco-animate">
+                <div class="place img" style="background-image: url(images/place-2.jpg);">
+                    <div class="text text-center">
+                        <span><img src="~/images/wedding-kiss.png" style="width:20%" /></span>
+                        <h3 style="font-size:1.5rem">Lễ thành hôn</h3>
+                        <p><span style="font-size:20px">CHỦ NHẬT</span></p>
+                        <p><span>Ngày 13 tháng 10 năm 2024</span><br><span>lúc 08h30</span></p>
+                        <p><span>Tại tư gia nhà trai: Thôn Lôi Xá - Đức Chính - Cẩm Giàng - Hải Dương</span></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 ftco-animate">
+                <div class="place img" style="background-image: url(images/place-1.jpg);">
+                    <div class="text text-center">
+                        <span><img src="~/images/bride-dress.png" style="width:20%" /></span>
+                        <h3 style="font-size:1.5rem">Tiệc đãi khách nhà gái</h3>
+                        <p><span style="font-size:20px">THỨ BẢY</span></p>
+                        <p><span>Ngày 12 tháng 10 năm 2024</span><br><span>lúc 16h00</span></p>
+                        <p><span>Nhà gái: Thôn Bằng Quân - Định Sơn - Cẩm Giàng - Hải Dương</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="ftco-section" id="gallery-section">
+    <div class="container-fluid px-md-4">
+        <div class="row justify-content-center pb-5">
+            <div class="col-md-12 text-center heading-section ftco-animate">
+                <span class="clone">Photos Gallery</span>
+                <h2 class="mb-3">Album ảnh cưới</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3 ftco-animate">
+                <a href="images/gallery/_LYL8279_1.jpg" class="gallery img image-popup d-flex align-items-center justify-content-center" style="background-image: url(images/gallery/_LYL8279_1.jpg);">
+                    <div class="icon d-flex align-items-center justify-content-center"><span class="ion-ios-image"></span></div>
+                </a>
+            </div>
+            <div class="col-md-3 ftco-animate">
+                <a href="images/gallery/_LYL8468_1.jpg" class="gallery img image-popup d-flex align-items-center justify-content-center" style="background-image: url(images/gallery/_LYL8468_1.jpg);">
+                    <div class="icon d-flex align-items-center justify-content-center"><span class="ion-ios-image"></span></div>
+                </a>
+            </div>
+            <div class="col-md-3 ftco-animate">
+                <a href="images/gallery/_LYL8544_1.jpg" class="gallery img image-popup d-flex align-items-center justify-content-center" style="background-image: url(images/gallery/_LYL8544_1.jpg);">
+                    <div class="icon d-flex align-items-center justify-content-center"><span class="ion-ios-image"></span></div>
+                </a>
+            </div>
+            <div class="col-md-3 ftco-animate">
+                <a href="images/gallery/_LYL8631_1.jpg" class="gallery img image-popup d-flex align-items-center justify-content-center" style="background-image: url(images/gallery/_LYL8631_1.jpg);">
+                    <div class="icon d-flex align-items-center justify-content-center"><span class="ion-ios-image"></span></div>
+                </a>
+            </div>
+            <div class="col-md-3 ftco-animate">
+                <a href="images/gallery/_LYL8799_1.jpg" class="gallery img image-popup d-flex align-items-center justify-content-center" style="background-image: url(images/gallery/_LYL8799_1.jpg);">
+                    <div class="icon d-flex align-items-center justify-content-center"><span class="ion-ios-image"></span></div>
+                </a>
+            </div>
+            <div class="col-md-3 ftco-animate">
+                <a href="images/gallery/_LYL8883_1.jpg" class="gallery img image-popup d-flex align-items-center justify-content-center" style="background-image: url(images/gallery/_LYL8883_1.jpg);">
+                    <div class="icon d-flex align-items-center justify-content-center"><span class="ion-ios-image"></span></div>
+                </a>
+            </div>
+            <div class="col-md-3 ftco-animate">
+                <a href="images/gallery/_LYL8907_1.jpg" class="gallery img image-popup d-flex align-items-center justify-content-center" style="background-image: url(images/gallery/_LYL8907_1.jpg);">
+                    <div class="icon d-flex align-items-center justify-content-center"><span class="ion-ios-image"></span></div>
+                </a>
+            </div>
+            <div class="col-md-3 ftco-animate">
+                <a href="images/gallery/LYL8915_1.jpg" class="gallery img image-popup d-flex align-items-center justify-content-center" style="background-image: url(images/gallery/LYL8915_1.jpg);">
+                    <div class="icon d-flex align-items-center justify-content-center"><span class="ion-ios-image"></span></div>
+                </a>
+            </div>
+            <div class="col-md-3 ftco-animate">
+                <a href="images/gallery/_LYL8980_3_1.jpg" class="gallery img image-popup d-flex align-items-center justify-content-center" style="background-image: url(images/gallery/_LYL8980_3_1.jpg);">
+                    <div class="icon d-flex align-items-center justify-content-center"><span class="ion-ios-image"></span></div>
+                </a>
+            </div>
+            <div class="col-md-3 ftco-animate">
+                <a href="images/gallery/_LYL9061_1.jpg" class="gallery img image-popup d-flex align-items-center justify-content-center" style="background-image: url(images/gallery/_LYL9061_1.jpg);">
+                    <div class="icon d-flex align-items-center justify-content-center"><span class="ion-ios-image"></span></div>
+                </a>
+            </div>
+            <div class="col-md-3 ftco-animate">
+                <a href="images/gallery/_LYL9155_1.jpg" class="gallery img image-popup d-flex align-items-center justify-content-center" style="background-image: url(images/gallery/_LYL9155_1.jpg);">
+                    <div class="icon d-flex align-items-center justify-content-center"><span class="ion-ios-image"></span></div>
+                </a>
+            </div>
+            <div class="col-md-3 ftco-animate">
+                <a href="images/gallery/_LYL9261_1.jpg" class="gallery img image-popup d-flex align-items-center justify-content-center" style="background-image: url(images/gallery/_LYL9261_1.jpg);">
+                    <div class="icon d-flex align-items-center justify-content-center"><span class="ion-ios-image"></span></div>
+                </a>
+            </div>
+            <div class="col-md-3 ftco-animate">
+                <a href="images/gallery/_LYL9589_1.jpg" class="gallery img image-popup d-flex align-items-center justify-content-center" style="background-image: url(images/gallery/_LYL9589_1.jpg);">
+                    <div class="icon d-flex align-items-center justify-content-center"><span class="ion-ios-image"></span></div>
+                </a>
+            </div>
+            <div class="col-md-3 ftco-animate">
+                <a href="images/gallery/_LYL9653_1.jpg" class="gallery img image-popup d-flex align-items-center justify-content-center" style="background-image: url(images/gallery/_LYL9653_1.jpg);">
+                    <div class="icon d-flex align-items-center justify-content-center"><span class="ion-ios-image"></span></div>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="ftco-section ftco-about ftco-no-pt ftco-no-pb" id="box">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="wrap">
+                    <div class="row d-flex">
+                        <div class="col-md-6 d-flex">
+                            <div class="img d-flex align-self-stretch align-items-center" style="background-image:url(images/QR2.png);">
+                            </div>
+                        </div>
+                        <div class="col-md-6 py-md-5 text">
+                            <div class="py-md-4">
+                                <div class="row justify-content-start pb-3">
+                                    <div class="col-md-12 ftco-animate p-4 p-lg-5 text-center">
+                                        <span class="subheading mb-4" style="font-size:42px; padding-bottom:20px; color:#fc7d80">HỘP MỪNG CƯỚI</span>
+                                        <span class="icon flaticon-rose-variant-outline-with-vines"></span>
+                                        <span class="subheading">Hôn lễ được tổ chức vào ngày</span>
+                                        <p class="time mb-4"><span>13/10/2024</span></p>
+                                        <span class="subheading mb-5">Bắt đầu vào lúc 11:00</span>
+                                        <span class="subheading mb-5" style="font-size:15px; font-style:italic; color:#fc7d80; text-transform:unset !important">
+                                            Sự có mặt của bạn là nguồn thu nhập vô cùng quý giá cho chúng tôi!
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="modal" id="formQR" tabindex="-1">
+    <div class="modal-dialog" style="background:#fff">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">LÌ XÌ GIA CHỦ</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="col-md-12 ftco-animate">
+                    <div class="place img">
+                        <h5 class="modal-title">Gửi lời chúc chân thành nhất tới cô dâu &amp; chú rể bằng 1 tiếng ting ting nhẹ nhàng tình cảm</h5>
+                        <div class="text text-center">
+                            <img src="~/images/QR1.png" style="width:100%" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+            </div>
+        </div>
+    </div>
+</div>

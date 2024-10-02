@@ -1,0 +1,172 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Nguyen Khanh &amp; Thu Huong wedding</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Great+Vibes&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Libre+Caslon+Text:400,400i,700&amp;display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="~/css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="~/css/animate.css">
+    <link rel="stylesheet" href="~/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="~/css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="~/css/magnific-popup.css">
+    <link rel="stylesheet" href="~/css/aos.css">
+    <link rel="stylesheet" href="~/css/ionicons.min.css">
+    <link rel="stylesheet" href="~/css/flaticon.css">
+    <link rel="stylesheet" href="~/css/icomoon.css">
+    <link rel="stylesheet" href="~/css/style.css">
+</head>
+<body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light site-navbar-target" id="ftco-navbar">
+        <div class="container">
+            <a class="navbar-brand" href="index-2.html"></a>
+            <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="oi oi-menu"></span> Menu
+            </button>
+            <div class="collapse navbar-collapse" id="ftco-nav">
+                <ul class="navbar-nav nav ml-auto">
+                    <li class="nav-item"><a href="#home-section" class="nav-link"><span>Trang chủ</span></a></li>
+                    <li class="nav-item"><a href="#groom-bride-section" class="nav-link"><span>Cô dâu &amp; Chú rể</span></a></li>
+                    <li class="nav-item"><a href="#lovestory-section" class="nav-link"><span>Dấu mốc tình yêu</span></a></li>
+                    <li class="nav-item"><a href="#greeting-section" class="nav-link"><span>Lời chúc ngọt ngào</span></a></li>
+                    <li class="nav-item"><a href="#when-where-section" class="nav-link"><span>Lịch trình</span></a></li>
+                    <li class="nav-item"><a href="#gallery-section" class="nav-link"><span>Album ảnh cưới</span></a></li>
+                    <li class="nav-item"><a href="#box" class="nav-link"><span>Hộp mừng cưới</span></a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="iconGift" id="moving-icon"><b onclick="showformQR()" title="Gửi quà tặng">🎁</b></div>
+    <div class="audio-controls">
+        <button id="play-btn" class="button">
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="27" fill="#fff" class="bi bi-volume-up-fill" viewBox="0 0 16 16">
+                <path d="M11.536 14.01A8.473 8.473 0 0 0 14.026 8a8.473 8.473 0 0 0-2.49-6.01l-.708.707A7.476 7.476 0 0 1 13.025 8c0 2.071-.84 3.946-2.197 5.303l.708.707z"></path>
+                <path d="M10.121 12.596A6.48 6.48 0 0 0 12.025 8a6.48 6.48 0 0 0-1.904-4.596l-.707.707A5.483 5.483 0 0 1 11.025 8a5.483 5.483 0 0 1-1.61 3.89l.706.706z"></path>
+                <path d="M8.707 11.182A4.486 4.486 0 0 0 10.025 8a4.486 4.486 0 0 0-1.318-3.182L8 5.525A3.489 3.489 0 0 1 9.025 8 3.49 3.49 0 0 1 8 10.475l.707.707zM6.717 3.55A.5.5 0 0 1 7 4v8a.5.5 0 0 1-.812.39L3.825 10.5H1.5A.5.5 0 0 1 1 10V6a.5.5 0 0 1 .5-.5h2.325l2.363-1.89a.5.5 0 0 1 .529-.06z"></path>
+            </svg>
+        </button>
+        <button id="pause-btn" class="button pause" style="display:none;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="27" fill="#fff" class="icon" viewBox="0 0 16 16">
+                <path d="M6.717 3.55A.5.5 0 0 1 7 4v8a.5.5 0 0 1-.812.39L3.825 10.5H1.5A.5.5 0 0 1 1 10V6a.5.5 0 0 1 .5-.5h2.325l2.363-1.89a.5.5 0 0 1 .529-.06z" />
+                <path d="M10.793 6.354a.5.5 0 1 1 .708.708L11.5 7.293l1.646 1.647a.5.5 0 0 1-.708.708L11.5 8.707l-1.646 1.647a.5.5 0 0 1-.708-.708L10.793 8 9.146 6.354a.5.5 0 1 1 .708-.708L11.5 7.293l1.646-1.647a.5.5 0 0 1 .708 0z" />
+            </svg>
+        </button>
+    </div>
+
+    @RenderBody()
+    <footer class="ftco-footer ftco-section">
+        <div class="overlay"></div>
+        <div class="container">
+            @* <div class="row mb-5">
+            <div class="col-md">
+            <div class="ftco-footer-widget mb-4">
+            <h2 class="ftco-heading-2">Hookup</h2>
+            <p>Far far away, behind the word mountains, far from the countries.</p>
+            <ul class="ftco-footer-social list-unstyled mt-5">
+            <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
+            <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
+            <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
+            </ul>
+            </div>
+            </div>
+            <div class="col-md">
+            <div class="ftco-footer-widget mb-4 ml-md-4">
+            <h2 class="ftco-heading-2">Quick Links</h2>
+            <ul class="list-unstyled">
+            <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Wellness</a></li>
+            <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Vintge stores</a></li>
+            <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Trekking</a></li>
+            <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Tour</a></li>
+            <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Sightseeing</a></li>
+            <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Many more..</a></li>
+            </ul>
+            </div>
+            </div>
+            <div class="col-md">
+            <div class="ftco-footer-widget mb-4 ml-md-4">
+            <h2 class="ftco-heading-2">Links</h2>
+            <ul class="list-unstyled">
+            <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Home</a></li>
+            <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Groom &amp; Bride</a></li>
+            <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Story</a></li>
+            <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Greetings</a></li>
+            <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>People</a></li>
+            <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Lịch trình</a></li>
+            <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Ảnh cưới</a></li>
+            </ul>
+            </div>
+            </div>
+            <div class="col-md">
+            <div class="ftco-footer-widget mb-4">
+            <h2 class="ftco-heading-2">Services</h2>
+            <ul class="list-unstyled">
+            <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Organizer</a></li>
+            <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Venue</a></li>
+            <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Wedding Ceremony</a></li>
+            <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Accomodation</a></li>
+            </ul>
+            </div>
+            </div>
+            <div class="col-md">
+            <div class="ftco-footer-widget mb-4">
+            <h2 class="ftco-heading-2">Have a Questions?</h2>
+            <div class="block-23 mb-3">
+            <ul>
+            <li><span class="icon icon-map-marker"></span><span class="text">203 Fake St. Mountain View, San Francisco, California, USA</span></li>
+            <li><a href="#"><span class="icon icon-phone"></span><span class="text">+2 392 3929 210</span></a></li>
+            <li><a href="#"><span class="icon icon-envelope pr-4"></span><span class="text"><span class="__cf_email__" data-cfemail="60090e060f20190f1512040f0d01090e4e030f0d">[email&#160;protected]</span></span></a></li>
+            </ul>
+            </div>
+            </div>
+            </div>
+            </div> *@
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <p>
+                        Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart color-danger" aria-hidden="true"></i> by <a href="https://colorlib.com/" target="_blank">Colorlib</a>
+                    </p>
+                    <p>
+                        bạn Hiếu làm nhá!
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div id="ftco-loader" class="show fullscreen">
+        <svg class="circular" width="48px" height="48px">
+            <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" />
+            <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00" />
+        </svg>
+    </div>
+    @* <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false) *@
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="~/js/jquery.min.js"></script>
+    <script src="~/js/jquery-migrate-3.0.1.min.js"></script>
+    <script src="~/js/popper.min.js"></script>
+    <script src="~/js/bootstrap.min.js"></script>
+    <script src="~/js/jquery.easing.1.3.js"></script>
+    <script src="~/js/jquery.waypoints.min.js"></script>
+    <script src="~/js/jquery.stellar.min.js"></script>
+    <script src="~/js/owl.carousel.min.js"></script>
+    <script src="~/js/jquery.magnific-popup.min.js"></script>
+    <script src="~/js/jquery.animateNumber.min.js"></script>
+    <script src="~/js/jquery.mb.YTPlayer.min.js"></script>
+    <script src="~/js/scrollax.min.js"></script>
+    <script src="~/js/main.js"></script>
+    <script src="~/js/audio.js"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-23581568-13');
+    </script>
+</body>
+
+</html>
